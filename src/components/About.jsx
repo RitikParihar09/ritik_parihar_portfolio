@@ -159,7 +159,7 @@ const About = () => {
 
 
           <img 
-            src="/homedp.png" 
+            src="https://res.cloudinary.com/dmllknkkp/image/upload/v1777208386/homedp_ixjrcy.png" 
             alt="Portrait of Ritik Parihar" 
             className="w-full max-w-[280px] sm:max-w-xs md:max-w-xl lg:max-w-2xl object-cover mx-auto relative z-10 drop-shadow-[0_0_60px_rgba(59,130,246,0.6)] dark:drop-shadow-[0_0_90px_rgba(37,99,235,0.5)]"
             onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/800x800/E2E8F0/4A5568?text=Image+Error'; }}
