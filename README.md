@@ -73,7 +73,7 @@ Feel free to reach out if you'd like to collaborate on a project or just want to
 
 - **LinkedIn**: [Ritik Parihar](https://www.linkedin.com/in/ritik-parihar/)
 - **GitHub**: [@RitikParihar09](https://github.com/RitikParihar09)
-- **Email**: ritikparihar09@gmail.com
+- **Email**: ritikparihar2171@gmail.com
 
 ---
 
