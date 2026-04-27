@@ -58,6 +58,7 @@ const Skills = () => {
             { name: 'Git', level: 'Expert', icon: 'https://img.icons8.com/?size=100&id=20906&format=png&color=000000' },
             { name: 'GitHub', level: 'Expert', icon: 'https://img.icons8.com/?size=100&id=12599&format=png&color=000000' },
             { name: 'Vercel', level: 'Advanced', icon: vercelLogo },
+            { name: 'Firebase', level: 'Intermediate', icon: 'https://img.icons8.com/?size=100&id=62452&format=png&color=000000' },
 
 
             { name: 'Netlify', level: 'Advanced', icon: netlifyLogo },

@@ -41,21 +41,34 @@ const certificationData = [
   },
 ];
 
-const CertificationCard = ({ title, issuer, imageUrl, link }) => (
-  <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl overflow-hidden flex flex-col h-full border border-gray-100 dark:border-gray-700 group hover:shadow-2xl transition-all duration-500">
-    <div className="relative overflow-hidden h-48 md:h-60">
-      <img src={imageUrl} alt={title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/400x300/E2E8F0/4A5568?text=Certificate'; }} />
-      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 via-transparent to-transparent opacity-60 group-hover:opacity-100 transition-opacity" />
-    </div>
-
-    <div className="p-6 md:p-8 flex flex-col flex-grow text-left">
-      <div className="mb-4">
-        <span className="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-[10px] font-bold rounded-full uppercase tracking-widest mb-2">
-          Verified Professional
-        </span>
-        <h3 className="text-xl md:text-2xl font-extrabold text-gray-800 dark:text-white leading-tight mb-2 group-hover:text-blue-600 transition-colors">{title}</h3>
-        <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Issued by: <span className="text-gray-700 dark:text-gray-300">{issuer}</span></p>
+const CertificationCard = ({ title, issuer, imageUrl, link }) => {
+  const [imgError, setImgError] = React.useState(false);
+  return (
+    <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl overflow-hidden flex flex-col h-full border border-gray-100 dark:border-gray-700 group hover:shadow-2xl transition-all duration-500">
+      <div className="relative overflow-hidden h-48 md:h-60 bg-gray-50 dark:bg-gray-900/50 flex items-center justify-center">
+        {!imgError ? (
+          <img 
+            src={imageUrl} 
+            alt={title} 
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+            onError={() => setImgError(true)} 
+          />
+        ) : (
+          <div className="p-8 text-center">
+            <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest">Certificate</h3>
+          </div>
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 via-transparent to-transparent opacity-60 group-hover:opacity-100 transition-opacity" />
       </div>
+
+      <div className="p-6 md:p-8 flex flex-col flex-grow text-left">
+        <div className="mb-4">
+          <span className="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-[10px] font-bold rounded-full uppercase tracking-widest mb-2">
+            Verified Professional
+          </span>
+          <h3 className="text-xl md:text-2xl font-extrabold text-gray-800 dark:text-white leading-tight mb-2 group-hover:text-blue-600 transition-colors">{title}</h3>
+          <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Issued by: <span className="text-gray-700 dark:text-gray-300">{issuer}</span></p>
+        </div>
 
       <div className="mt-auto pt-6 border-t border-gray-100 dark:border-gray-700">
         <a
@@ -68,9 +81,10 @@ const CertificationCard = ({ title, issuer, imageUrl, link }) => (
           <svg className="w-5 h-5 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
         </a>
       </div>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const Certifications = () => {
   const prevRef = React.useRef(null);
