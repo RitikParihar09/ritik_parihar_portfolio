@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import interviewBuddyImg from '../assets/projects/InterviewBuddy.png';
+import studentManagementImg from '../assets/projects/StudentManagement.png';
+import resumeAnalyzerImg from '../assets/projects/resumeaipowered.png';
 
 const AnimatedSection = ({ children, id, className }) => (
     <motion.section
@@ -206,10 +208,20 @@ const Projects = () => {
             demoLink: 'https://ai-powered-interview-simulator-two.vercel.app/'
         },
         {
+            title: 'Student Management System',
+            category: 'Full Stack',
+            description: 'Built a full-stack CRUD web application using Spring Boot MVC with a clean layered architecture. Integrated Thymeleaf UI with Spring Data JPA and MySQL, and resolved request-mapping issues during form submission.',
+            imageUrl: studentManagementImg,
+            tech: ['Java', 'Spring Boot', 'Thymeleaf', 'MySQL', 'Spring Data JPA'],
+            hasDemo: false,
+            demoLink: '#',
+            codeLink: 'https://github.com/RitikParihar09/StudentsManagementSystem'
+        },
+        {
             title: 'AI-Powered Resume Analyzer',
             category: 'AI / ML',
             description: 'Built an AI tool to analyze resumes against job descriptions, providing match percentages, summaries, and skill suggestions. Integrated Google Gemini for smart recommendations and Streamlit for an interactive UI.',
-            imageUrl: 'https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?q=80&w=1480&auto=format&fit=crop',
+            imageUrl: resumeAnalyzerImg,
             tech: ['Python', 'Streamlit', 'Google Gemini', 'NLP', 'PyPDF2'],
             hasDemo: false,
             demoLink: '#',
