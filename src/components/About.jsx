@@ -50,7 +50,7 @@ const About = () => {
           </div>
 
           <div className="mt-10 flex flex-wrap justify-center md:justify-start gap-4">
-            <a href="https://drive.google.com/file/d/1ZWsxoQ3WcVUWOMgUAxfjAO0YPYWLY7xL/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white font-bold py-3 px-8 rounded-xl hover:bg-blue-700 transition-transform transform hover:scale-105 shadow-xl text-lg">
+            <a href="https://drive.google.com/file/d/1J1-gnjn5wkKntV1NMaTEf0MkSYiPTThE/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white font-bold py-3 px-8 rounded-xl hover:bg-blue-700 transition-transform transform hover:scale-105 shadow-xl text-lg">
               Check Resume
             </a>
             <a href="https://github.com/RitikParihar09" target="_blank" rel="noopener noreferrer" className="bg-gray-800 dark:bg-gray-700 text-white font-bold py-3 px-8 rounded-xl hover:bg-black dark:hover:bg-gray-600 transition-transform transform hover:scale-105 shadow-xl text-lg flex items-center gap-2">
