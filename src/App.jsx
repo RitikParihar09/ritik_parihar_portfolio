@@ -8,6 +8,7 @@ import Skills from './components/Skills';
 import Certifications from './components/Certifications'; // Import the new component
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -47,6 +48,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

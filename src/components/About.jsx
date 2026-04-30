@@ -12,7 +12,7 @@ const About = () => {
   });
 
   return (
-    <section id="about" className="min-h-screen flex items-center md:items-end bg-gray-50 dark:bg-gray-900 pt-20 md:pt-56 transition-colors duration-300 overflow-x-hidden">
+    <section id="about" className="min-h-screen flex items-center md:items-end bg-gray-50 dark:bg-gray-900 pt-20 md:pt-56 transition-colors duration-300">
       <div className="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center md:items-end justify-between gap-10 md:gap-16 lg:gap-20 h-full">
 
         {/* Left Column: All Text Content */}
